@@ -125,21 +125,21 @@ int main(int argc, char **argv)
 
     string uri = "http://localhost:8989/ws";
     if (ros::param::get("~serial_port_json_server_url", uri))
-	{
-		ros::param::del("~serial_port_json_server_url");
-	}
+    {
+	ros::param::del("~serial_port_json_server_url");
+    }
 
     string usbPort = "/dev/ttyUSB0";
     if (ros::param::get("~usb_port", usbPort))
-	{
-		ros::param::del("~usb_port");
-	}
+    {
+	ros::param::del("~usb_port");
+    }
     
     int timeBetweenStatusReports = 100;
     if (ros::param::get("~report_delay", timeBetweenStatusReports))
-	{
-		ros::param::del("~report_delay");
-	}
+    {
+	ros::param::del("~report_delay");
+    }
 
     string cmdBegin = "sendjson {\"P\":\"";
     cmdBegin += usbPort;
